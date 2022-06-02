@@ -1,5 +1,7 @@
 language: generic
-sudo: required
+dist: xenial
+os:
+  - linux
 services:
   - docker
 
@@ -14,7 +16,7 @@ deploy:
   region: "us-east-1"
   app: "docker-react"
   env: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-us-east-1-000744531605"
+  bucket: "elasticbeanstalk-us-east-1-000744531605"
   bucket_path: "docker-react"
   on:
     branch: master
